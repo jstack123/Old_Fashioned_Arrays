@@ -4,12 +4,26 @@ public class Inserting {
 
 	public static int[] insertAt(int[] testArray, int location, int num) {
 	int[] temp = new int[testArray.length+1];
+	
 	for (int i = 0; i < temp.length; i++) {
-		temp[i] = ;
+		if (i<temp.length) {
+			
+		if (i==location) {
+			temp[location] = num;
+		} else if (i<location) {
+			temp[i] = testArray[i];
+		}else if(i>location) {
+			temp[i] = testArray[i-1];
+		}
 	}
-			testArray[location] = num;
+		System.out.println(temp[i]);
+	}
+	
 		
-		return testArray;
+	
+			 //testArray = testArray.length-1;
+			
+		return temp;
 	}
 
 }
